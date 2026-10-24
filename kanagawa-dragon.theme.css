@@ -1,0 +1,126 @@
+/**
+ * @name system24 (Kanagawa Dragon)
+ * @author refact0r; palette adapted by nuggocto
+ * @version 2.1.0
+ * @description System24/TUI layout with the Kanagawa Dragon palette.
+ * @source https://github.com/refact0r/system24
+ */
+
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+  --font: 'VictorMono Nerd Font Mono';
+  --code-font: 'VictorMono Nerd Font Mono';
+  font-weight: 400;
+  letter-spacing: -0.05ch;
+  --gap: 12px;
+  --divider-thickness: 4px;
+  --border-thickness: 2px;
+  --border-hover-transition: 0.2s ease;
+  --animations: on;
+  --list-item-transition: 0.2s ease;
+  --dms-icon-svg-transition: 0.4s ease;
+  --top-bar-height: var(--gap);
+  --top-bar-button-position: titlebar;
+  --top-bar-title-position: off;
+  --subtle-top-bar-title: off;
+  --custom-window-controls: off;
+  --window-control-size: 14px;
+  --custom-dms-icon: off;
+  --custom-dms-background: off;
+  --background-image: off;
+  --transparency-tweaks: off;
+  --remove-bg-layer: off;
+  --panel-blur: off;
+  --bg-floating: var(--bg-3);
+  --small-user-panel: on;
+  --unrounding: on;
+  --round-pfp: off;
+  --remove-pfp-decor: off;
+  --custom-spotify-bar: on;
+  --ascii-titles: on;
+  --ascii-loader: system24;
+  --panel-labels: on;
+  --label-color: var(--text-5);
+  --label-font-weight: 500;
+}
+
+:root {
+  --colors: on;
+  --text-0: #181616;
+  --text-1: #c5c9c5;
+  --text-2: #c5c9c5;
+  --text-3: #c5c9c5;
+  --text-4: #9e9b93;
+  --text-5: #7a8382;
+  --bg-1: #393836;
+  --bg-2: #1d1c19;
+  --bg-3: #12120f;
+  --bg-4: #181616;
+  --hover: #625e5a4d;
+  --active: #8992a733;
+  --active-2: #8992a74d;
+  --message-hover: #39383640;
+  --accent-1: #8ba4b0;
+  --accent-2: #8ba4b0;
+  --accent-3: #8992a7;
+  --accent-4: #8ba4b0;
+  --accent-5: #8ea4a2;
+  --accent-new: var(--red-2);
+  --mention: linear-gradient(to right, #8ba4b01a 40%, transparent);
+  --mention-hover: linear-gradient(to right, #8ba4b026 40%, transparent);
+  --reply: linear-gradient(to right, #c5c9c510 40%, transparent);
+  --reply-hover: linear-gradient(to right, #c5c9c51a 40%, transparent);
+  --online: var(--green-2);
+  --dnd: var(--red-2);
+  --idle: var(--yellow-2);
+  --streaming: var(--purple-2);
+  --offline: var(--text-5);
+  --border-light: #39383680;
+  --border: #393836;
+  --border-hover: #8ba4b0;
+  --button-border: #393836;
+  --red-1: #e46876;
+  --red-2: #c4746e;
+  --red-3: #c4746e;
+  --red-4: color-mix(in srgb, #c4746e, black 10%);
+  --red-5: color-mix(in srgb, #c4746e, black 20%);
+  --green-1: #87a987;
+  --green-2: #8a9a7b;
+  --green-3: #8a9a7b;
+  --green-4: color-mix(in srgb, #8a9a7b, black 10%);
+  --green-5: color-mix(in srgb, #8a9a7b, black 20%);
+  --blue-1: #7fb4ca;
+  --blue-2: #8ba4b0;
+  --blue-3: #8ba4b0;
+  --blue-4: color-mix(in srgb, #8ba4b0, black 10%);
+  --blue-5: color-mix(in srgb, #8ba4b0, black 20%);
+  --yellow-1: #e6c384;
+  --yellow-2: #c4b28a;
+  --yellow-3: #c4b28a;
+  --yellow-4: color-mix(in srgb, #c4b28a, black 10%);
+  --yellow-5: color-mix(in srgb, #c4b28a, black 20%);
+  --purple-1: #938aa9;
+  --purple-2: #a292a3;
+  --purple-3: #a292a3;
+  --purple-4: color-mix(in srgb, #a292a3, black 10%);
+  --purple-5: color-mix(in srgb, #a292a3, black 20%);
+}
+
+/* Preserve the existing code palette and unread-channel contrast. */
+.hljs { color: #c5c9c5; background: #12120f; }
+.hljs-comment { color: #7a8382 !important; font-style: italic; }
+.hljs-keyword { color: #e46876 !important; }
+.hljs-string { color: #8a9a7b !important; }
+.hljs-number { color: #a292a3 !important; }
+.hljs-type, .hljs-built_in { color: #8ea4a2 !important; }
+.hljs-title, .hljs-title.function_ { color: #8ba4b0 !important; }
+.hljs-attr { color: #c4b28a !important; }
+.hljs-literal { color: #ff9e3b !important; }
+.hljs-regexp { color: #e46876 !important; }
+[class*='modeUnreadImportant'] [class*='name'],
+[class*='modeUnreadImportant'] [class*='channelName'] {
+  color: var(--text-1) !important;
+  font-weight: 650;
+  opacity: 1 !important;
+}
