@@ -1,52 +1,19 @@
 /**
  * @name system24 (Kanagawa Dragon)
  * @author refact0r; palette adapted by nuggocto
- * @version 2.1.0
- * @description System24/TUI layout with the Kanagawa Dragon palette.
+ * @version 3.0.0
+ * @description Kanagawa Dragon palette with lightweight System24 styling.
  * @source https://github.com/refact0r/system24
  */
 
-@import url('https://refact0r.github.io/system24/build/system24.css');
-
 body {
-  --font: 'VictorMono Nerd Font Mono';
-  --code-font: 'VictorMono Nerd Font Mono';
   font-weight: 400;
   letter-spacing: -0.05ch;
-  --gap: 12px;
-  --divider-thickness: 4px;
-  --border-thickness: 2px;
-  --border-hover-transition: 0.2s ease;
-  --animations: on;
-  --list-item-transition: 0.2s ease;
-  --dms-icon-svg-transition: 0.4s ease;
-  --top-bar-height: var(--gap);
-  --top-bar-button-position: titlebar;
-  --top-bar-title-position: off;
-  --subtle-top-bar-title: off;
-  --custom-window-controls: off;
-  --window-control-size: 14px;
-  --custom-dms-icon: off;
-  --custom-dms-background: off;
-  --background-image: off;
-  --transparency-tweaks: off;
-  --remove-bg-layer: off;
-  --panel-blur: off;
-  --bg-floating: var(--bg-3);
-  --small-user-panel: on;
-  --unrounding: on;
-  --round-pfp: off;
-  --remove-pfp-decor: off;
-  --custom-spotify-bar: on;
-  --ascii-titles: on;
-  --ascii-loader: system24;
-  --panel-labels: on;
-  --label-color: var(--text-5);
-  --label-font-weight: 500;
 }
 
 :root {
-  --colors: on;
+  --font: 'VictorMono Nerd Font Mono';
+  --code-font: 'VictorMono Nerd Font Mono';
   --text-0: #181616;
   --text-1: #c5c9c5;
   --text-2: #c5c9c5;
@@ -123,4 +90,154 @@ body {
   color: var(--text-1) !important;
   font-weight: 650;
   opacity: 1 !important;
+}
+
+/* System24 and midnight-discord by refact0r (MIT). */
+
+/* Set Discord's theme tokens on the same elements Discord uses, rather than
+   restyling every message, icon, and control. Keep custom profile palettes. */
+:is(:root, body, .theme-dark, .theme-darker, .theme-midnight, .theme-light):not(.custom-user-profile-theme) {
+    --font-primary: var(--font), ui-monospace, monospace;
+    --font-display: var(--font-primary);
+    --font-code: var(--code-font), ui-monospace, monospace;
+
+    --app-frame-background: var(--bg-3);
+    --app-frame-border: var(--border);
+    --background-base-low: var(--bg-4);
+    --background-base-lower: var(--bg-4);
+    --background-base-lowest: var(--bg-3);
+    --background-surface-high: var(--bg-3);
+    --background-surface-higher: var(--bg-3);
+    --background-surface-highest: var(--bg-3);
+    --background-secondary-alt: var(--bg-3);
+    --background-mod-subtle: var(--hover);
+    --background-mod-muted: var(--hover);
+    --background-mod-normal: var(--bg-2);
+    --background-mod-strong: var(--bg-1);
+    --background-brand: var(--accent-2);
+    --background-accent: var(--bg-2);
+    --background-code: var(--bg-3);
+    --bg-surface-overlay-tmp: var(--bg-3);
+    --bg-surface-raised: var(--bg-3);
+    --card-background-default: var(--bg-3);
+    --card-secondary-bg: var(--bg-2);
+    --chat-background-default: var(--bg-4);
+    --channeltextarea-background: var(--bg-2);
+    --home-background: var(--bg-4);
+    --modal-background: var(--bg-4);
+    --modal-footer-background: var(--bg-3);
+
+    --border-subtle: var(--border-light);
+    --border-muted: var(--border-light);
+    --border-normal: var(--border);
+    --border-strong: var(--border-hover);
+    --text-default: var(--text-3);
+    --text-strong: var(--text-2);
+    --text-subtle: var(--text-4);
+    --text-muted: var(--text-5);
+    --text-link: var(--accent-1);
+    --text-brand: var(--accent-1);
+    --text-feedback-critical: var(--red-1);
+    --text-feedback-info: var(--blue-1);
+    --text-feedback-positive: var(--green-1);
+    --text-feedback-warning: var(--yellow-1);
+    --icon-default: var(--text-4);
+    --icon-strong: var(--text-3);
+    --icon-subtle: var(--text-4);
+    --icon-muted: var(--text-5);
+    --channel-icon: var(--text-4);
+    --channels-default: var(--text-4);
+    --interactive-background-hover: var(--hover);
+    --interactive-background-active: var(--active-2);
+    --interactive-background-selected: var(--active);
+    --interactive-icon-hover: var(--text-2);
+    --interactive-icon-active: var(--text-1);
+    --interactive-text-default: var(--text-4);
+    --interactive-text-hover: var(--text-2);
+    --interactive-text-active: var(--text-1);
+
+    --input-background-default: var(--bg-3);
+    --input-border-default: var(--border-light);
+    --input-border-hover: var(--border);
+    --input-border-active: var(--accent-2);
+    --input-text-default: var(--text-3);
+    --input-placeholder-text-default: var(--text-5);
+    --channel-text-area-placeholder: var(--text-5);
+    --control-brand-foreground: var(--accent-2);
+    --control-primary-background-default: var(--accent-3);
+    --control-primary-background-hover: var(--accent-4);
+    --control-primary-background-active: var(--accent-5);
+    --control-primary-text-default: var(--text-0);
+    --control-primary-text-hover: var(--text-0);
+    --control-primary-text-active: var(--text-0);
+    --control-primary-icon-default: var(--text-0);
+    --control-primary-icon-hover: var(--text-0);
+    --control-primary-icon-active: var(--text-0);
+    --control-secondary-background-default: var(--bg-2);
+    --control-secondary-background-hover: var(--bg-1);
+    --control-secondary-background-active: var(--active);
+    --control-secondary-text-default: var(--text-3);
+    --control-secondary-text-hover: var(--text-2);
+    --control-secondary-text-active: var(--text-1);
+    --checkbox-background-selected-default: var(--accent-2);
+    --switch-background-selected-default: var(--accent-2);
+
+    --mention-foreground: var(--accent-1);
+    --mention-background: color-mix(in srgb, var(--accent-2), transparent 85%);
+    --message-background-hover: var(--message-hover);
+    --message-mentioned-background-default: color-mix(in srgb, var(--accent-2), transparent 90%);
+    --message-mentioned-background-hover: color-mix(in srgb, var(--accent-2), transparent 85%);
+    --message-highlight-background-default: color-mix(in srgb, var(--text-3), transparent 93%);
+    --message-highlight-background-hover: color-mix(in srgb, var(--text-3), transparent 90%);
+    --reaction-background-default: var(--hover);
+    --reaction-background-hover: var(--active);
+    --reaction-text-default: var(--text-3);
+    --reaction-text-reacted-default: var(--text-1);
+    --reaction-border-reacted-default: var(--accent-2);
+    --badge-background-default: var(--accent-2);
+    --badge-notification-background: var(--accent-new);
+    --badge-text-default: var(--text-0);
+    --status-danger: var(--red-2);
+    --status-speaking: var(--online);
+    --icon-status-online: var(--online);
+    --icon-status-dnd: var(--dnd);
+    --icon-status-idle: var(--idle);
+    --icon-status-offline: var(--offline);
+}
+
+/* Inset panel borders give the TUI look without changing Discord's layout or
+   moving any controls. Leave native keyboard focus outlines alone. */
+#app-mount :is(.guilds_pog62O, .sidebarList_pog62O, .panels_pog62O) {
+    background-color: var(--bg-3);
+}
+
+#app-mount :is(
+    .guilds_pog62O,
+    .sidebarList_pog62O,
+    .panels_pog62O,
+    .chat_z_gUBg > .subtitleContainer_z_gUBg,
+    .chatContent_z_gUBg,
+    .channelTextArea_z_gUBg,
+    .container_86es0b
+):not(:focus-visible) {
+    border-radius: 0;
+    outline: 1px solid var(--border);
+    outline-offset: -1px;
+}
+
+/* Use the original gradients on the known message classes. */
+#app-mount .message_SY_P2T.mentioned_SY_P2T {
+    background: var(--mention);
+}
+
+#app-mount .message_SY_P2T.mentioned_SY_P2T:hover {
+    background: var(--mention-hover);
+}
+
+#app-mount .message_SY_P2T.replying_SY_P2T {
+    background: var(--reply);
+}
+
+#app-mount .message_SY_P2T.replying_SY_P2T:hover {
+    background: var(--reply-hover);
 }
